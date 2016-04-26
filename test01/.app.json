@@ -7,17 +7,77 @@
       "components": [],
       "title": "Home View",
       "addToNavigation": true,
+      "icon": "sounds"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "homeView",
+      "components": [],
+      "title": "Home View1",
+      "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "masterDetailView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [],
+              "name": "editableListForm10",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [],
+              "name": "editableListForm11",
+              "formType": "edit"
+            }
+          ],
+          "name": "masterDetailViewModel",
+          "dataProvider": "test01",
+          "collection": "test01",
+          "headerField": "test01",
+          "iconField": true,
+          "pullToRefresh": true,
+          "endlessScroll": false,
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "test01",
+          "detailDescriptionField": "test01",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Edit"
+        }
+      ],
+      "title": "Master Detail",
+      "addToNavigation": true,
+      "icon": "organize"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "test01",
+      "title": "test01 / test01",
+      "source": "everlive",
+      "everliveKey": "cra78odr92th85ad",
+      "offlineStorage": true
+    }
+  ],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
+  "navigation": "drawer",
   "view": "home",
-  "transition": "slide",
-  "showMoreTab": false,
   "skin": "nova",
-  "skinMainColor": "#32364c",
+  "skinMainColor": "#66ffff",
   "skinTextColor": "#ffffff",
-  "skinAccentColor": "#ff4350"
+  "skinAccentColor": "#3300cc"
 }
